@@ -40,7 +40,7 @@ code {
     padding: 3px 6px; 
     border-radius: 5px; 
     font-family: monospace; 
-    color: #cc55ff; 
+    color: cornflowerblue; 
 }
 
 
@@ -88,5 +88,12 @@ overflow: auto;
     border: 1px solid #8855ff;
     border-radius: 5px;
     font-size: 18px; 
+    color: #9655ff;
+}
+
+#server-status a:hover {
+    color: #ec40fc; 
+}
+#server-status a {
     color: #9655ff;
 }

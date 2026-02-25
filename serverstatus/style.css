@@ -92,3 +92,7 @@ font-size: 20px;
     color: #9655ff;
 
 }
+
+.anamenu:hover {
+    color: #ec40fc;
+}

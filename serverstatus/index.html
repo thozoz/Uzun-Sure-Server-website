@@ -51,15 +51,16 @@ async function getStatus() {
             statusText.innerHTML = `
                 <span style="color: #55ff55;">Online</span> - ${data.players.online}/${data.players.max} Kişi<br>
                 <span style="font-size: 0.9em; color: #ccc;">
-                    <b style="color: white;">Sürüm</b> ${version} (Java)<br>
-                    <b style="color: white;">IP:</b> <b style="color: cornflowerblue;">oyna.thozoz.vip</b>
+                    <b style="color: white;">Sürüm:</b> ${version} (Java)<br>
+                    <b style="color: white;">IP:</b> <b style="color: cornflowerblue;">oyna.thozoz.vip</b> <br>
+                    <b style="color: white;">Açıklama: </b> ${data.motd.clean}
                 </span>
             `;
         } else {
             statusText.innerHTML = `<span style="color: #ff5555;">Offline</span>`;
         }
     } catch (error) {
-        document.getElementById('status-text').innerText = "Hata";
+        document.getElementById('status-text').innerText = "Hata, sayfayı yenilemeyi deneyin.";
     }
 }
 getStatus();
