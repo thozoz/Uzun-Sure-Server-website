@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta property="og:title" content="Uzun Süre Server Durumu">
+    <meta property="og:description" content="Uzun Süre Server güncel durum">
+    <meta property="og:image" content="https://mc.thozoz.vip/resim/sunucusimge.png">
+    <meta property="og:url" content="https://mc.thozoz.vip">
+    <meta property="og:image:alt" content="Uzun Süre Server Logosu">
+    <meta name="theme-color" content="#55ff55">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Uzun Süre Server Durumu</title>
+    <link rel="icon" type="image/png" href="/resim/sunucusimge.png">
+
+</head>
+<body>
+    
+    <h1>Uzun Süre Server Durumu </h1>
+    <br><br>
+    <img src="/resim/sunucusimge.png" alt="Sunucu Resmi" class="pp-sağ">
+    <img src="/resim/sunucusimge.png" alt="Sunucu Resmi" class="pp-sol">
+
+    <hr> 
+    <h2 id="server-durum">Server Durumu</h2>
+    <a class="anamenu" href="/">Ana Sayfa</a>
+    <p class="durum"> Durum: <span id="status-text">Yükleniyor...</span></p>
+    
+
+
+</body>
+<footer id="ana-footer">
+    <hr> <div class="footer-icerik">
+        <p>HTML öğrenmek için yapılmıştır</p>
+        <p>
+            Yapan: <a href="mailto:mail@thozoz.vip">thozoz</a> | 
+            <a href="https://discord.gg/UZSwquwWYv" target="_blank">Discord Sunucumuz</a>
+        </p>
+    </div>
+</footer>
+<script>
+async function getStatus() {
+    try {
+        const response = await fetch('https://api.mcsrvstat.us/2/oyna.thozoz.vip');
+        const data = await response.json();
+        const statusText = document.getElementById('status-text');
+
+        if (data.online) {
+            
+            statusText.innerHTML = `
+                <span style="color: #55ff55;">Online</span> - ${data.players.online}/${data.players.max} Kişi<br>
+                <span style="font-size: 0.9em; color: #ccc;">
+                    <b style="color: white;">Sürüm</b> ${version} (Java)<br>
+                    <b style="color: white;">IP:</b> <b style="color: cornflowerblue;">oyna.thozoz.vip</b>
+                </span>
+            `;
+        } else {
+            statusText.innerHTML = `<span style="color: #ff5555;">Offline</span>`;
+        }
+    } catch (error) {
+        document.getElementById('status-text').innerText = "Hata";
+    }
+}
+getStatus();
+setInterval(getStatus, 60000); //her dakika yenileme
+</script>
+</html>

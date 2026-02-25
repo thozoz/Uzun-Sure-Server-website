@@ -1,60 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
-<head>
-    <meta property="og:title" content="Uzun Süre Server - Kullanım Kılavuzu">
-    <meta property="og:description" content="Uzun Süre Server içinde kullanılan özel modlar/komutlar">
-    <meta property="og:image" content="https://mc.thozoz.vip/resim/sunucusimge.png">
-    <meta property="og:url" content="https://mc.thozoz.vip">
-    <meta property="og:image:alt" content="Uzun Süre Server Logosu">
-    <meta name="theme-color" content="#55ff55">
+  <head>
+    <meta property="og:title" content="Uzun Süre Server - Kullanım Kılavuzu" />
+    <meta
+      property="og:description"
+      content="Uzun Süre Server içinde kullanılan özel modlar/komutlar"
+    />
+    <meta
+      property="og:image"
+      content="https://mc.thozoz.vip/resim/sunucusimge.png"
+    />
+    <meta property="og:url" content="https://mc.thozoz.vip" />
+    <meta property="og:image:alt" content="Uzun Süre Server Logosu" />
+    <meta name="theme-color" content="#55ff55" />
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Uzun Süre Server</title>
-    <link rel="icon" type="image/png" href="resim/sunucusimge.png">
-
-</head>
-<body>
+    <link rel="icon" type="image/png" href="/resim/sunucusimge.png" />
+  </head>
+  <body>
     <h1>Uzun Süre Server Kullanım Kılavuzu</h1>
 
-    <img src="resim/sunucusimge.png" alt="Sunucu Resmi" class="pp-sağ">
-    <img src="resim/sunucusimge.png" alt="Sunucu Resmi" class="pp-sol">
+    <img src="/resim/sunucusimge.png" alt="Sunucu Resmi" class="pp-sağ" />
+    <img src="/resim/sunucusimge.png" alt="Sunucu Resmi" class="pp-sol" />
 
-    <p class="modlar"> Serverda Kullanılan Modlar: <br>
-        <a href="#login-bolumu">Login</a>, 
-        <a href="#market-bolumu">Market</a>, 
-        <a href="#claim-bolumu">Claim</a>
+    <p class="modlar">
+      Server'da Kullanılan Modlar:
+      <span id="server-status"><a href="/serverstatus/">Server durumuna bakmak için tıkla</a></span>
+      <br />
+      <a href="#login-bolumu">Login</a>
+      ,
+      <a href="#market-bolumu">Market</a>
+      ,
+      <a href="#claim-bolumu">Claim</a>
     </p>
 
-    <hr> 
+    <hr />
     <h2 id="login-bolumu">Login Modu Kullanımı</h2>
-    <p>İlk girişte <code>/register şifre şifre</code> ile, sonraki girişlerde <code>/login şifre</code> ile giriş yapabilirsiniz. Aynı bilgisayardan girişlerde bazen şifre istemeden de otomatik giriş yapar.</p>    
+    <p>
+      İlk girişte
+      <code>/register şifre şifre</code>
+      ile, sonraki girişlerde
+      <code>/login şifre</code>
+      ile giriş yapabilirsiniz. Aynı bilgisayardan girişlerde bazen şifre
+      istemeden de otomatik giriş yapar.
+    </p>
 
-    <br><hr>
+    <br />
+    <hr />
 
-    <h2 id="market-bolumu">Market Modu Kullanımı</h2> <br>
-    <img src="resim/market/marketcraft.png" alt="Market Craft">
-    <p>Market bloğu yapma resimdeki gibidir. Bu bloğu sandık, varil gibi açılabilir şeylerin üstüne koyarsanız çalışır. 
-    <br><br>Claim alınmış bir bölgede kullanılması önerilir yoksa üstüne koyduğunuz sandık direkt açılarak içinden eşya alınabilir. 
-    <br><br>Koyulduktan sonra sağ tık ile market menüsü açılır, satılanlar ve değerleri oradan belirlenir. </p>
-    
-    <br><hr>
+    <h2 id="market-bolumu">Market Modu Kullanımı</h2>
+    <br />
+    <img src="resim/market/marketcraft.png" alt="Market Craft" />
+    <p>
+      Market bloğu yapma resimdeki gibidir. Bu bloğu sandık, varil gibi
+      açılabilir şeylerin üstüne koyarsanız çalışır.
+      <br />
+      <br />
+      Claim alınmış bir bölgede kullanılması önerilir yoksa üstüne koyduğunuz
+      sandık direkt açılarak içinden eşya alınabilir.
+      <br />
+      <br />
+      Koyulduktan sonra sağ tık ile market menüsü açılır, satılanlar ve
+      değerleri oradan belirlenir.
+    </p>
+
+    <br />
+    <hr />
 
     <h2 id="claim-bolumu">Claim Modu Kullanımı</h2>
-    <p>Altın çapa ile claim alınabilir. Claim almak için minimum 100 blokluk bir alan seçilmelidir.</p> <img src="resim/çapa/claim.png" alt="Çapa Yazı" class="sağa">
-    <p>Altın çapayı elinize alınca claim alabileceğiniz blok sayısı chat kısmında yazar, serverda oynadıkça blok sayınız artar. (afk kalırsanız artmaz) 
-    <br><br>Claim ayarlarını düzenlemek için <code>/flan menu</code>. Eğer başkasının claimi içinde sıkıştıysanız çıkmak için <code>/flan trapped</code>. 
-    <br><br>Eğer claim içinde başka claim yapmak (subclaim) istiyorsanız <code>/flan switchMode SUBCLAIM</code>, geri normal claim moduna dönmek için <code>/flan switchMode DEFAULT</code> </p>
-
-</body>
-<footer id="ana-footer">
-    <hr> <div class="footer-icerik">
-        <p>Html öğrenmek için yapılmıştır</p>
-        <p>
-            Yapan: <a href="mailto:mail@thozoz.vip">thozoz</a> | 
-            <a href="https://discord.gg/UZSwquwWYv" target="_blank">Discord Sunucumuz</a>
-        </p>
+    <p>
+      Altın çapa ile claim alınabilir. Claim almak için minimum 100 blokluk bir
+      alan seçilmelidir.
+    </p>
+    <img src="resim/çapa/claim.png" alt="Çapa Yazı" class="sağa" />
+    <p>
+      Altın çapayı elinize alınca claim alabileceğiniz blok sayısı chat kısmında
+      yazar, serverda oynadıkça blok sayınız artar. (afk kalırsanız artmaz)
+      <br />
+      <br />
+      Claim ayarlarını düzenlemek için
+      <code>/flan menu</code>
+      . Eğer başkasının claimi içinde sıkıştıysanız çıkmak için
+      <code>/flan trapped</code>
+      .
+      <br />
+      <br />
+      Eğer claim içinde başka claim yapmak (subclaim) istiyorsanız
+      <code>/flan switchMode SUBCLAIM</code>
+      , geri normal claim moduna dönmek için
+      <code>/flan switchMode DEFAULT</code>
+    </p>
+  </body>
+  <footer id="ana-footer">
+    <hr />
+    <div class="footer-icerik">
+      <p>HTML öğrenmek için yapılmıştır</p>
+      <p>
+        Yapan:
+        <a href="mailto:mail@thozoz.vip">thozoz</a>
+        |
+        <a href="https://discord.gg/UZSwquwWYv" target="_blank">
+          Discord Sunucumuz
+        </a>
+      </p>
     </div>
-</footer>
+  </footer>
 </html>

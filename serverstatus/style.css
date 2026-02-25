@@ -24,7 +24,7 @@ h2 {
 
 
 a {
-    color: #55beff; 
+    color: #55ffff; 
     text-decoration: none; 
 }
 
@@ -61,8 +61,7 @@ img {
     right: 20px;       
     top: 10px;     
     width: 100px;    
-    z-index: 10; 
-    border-radius: 12px;     
+    z-index: 10;      
 }
 
 .pp-sol {
@@ -70,17 +69,19 @@ img {
     left: 20px;        
     top: 10px;         
     width: 100px;       
-    z-index: 10;  
-    border-radius: 12px;     
-      
+    z-index: 10;        
 }
 
 .modlar {
 margin-top: 70px;
-overflow: auto;
 }
 
-#server-status {
+.durum{
+font-size: 20px;
+
+}
+
+.anamenu {
     float: right; 
     margin-right: 50px; 
     background-color: #1e1e1e;
@@ -89,4 +90,5 @@ overflow: auto;
     border-radius: 5px;
     font-size: 18px; 
     color: #9655ff;
+
 }
