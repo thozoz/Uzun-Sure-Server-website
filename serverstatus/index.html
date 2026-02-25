@@ -47,7 +47,7 @@ async function getStatus() {
         const statusText = document.getElementById('status-text');
 
         if (data.online) {
-            
+            const version = data.version || "Bilinmiyor";  //durum göstergesi çalışması için lazım
             statusText.innerHTML = `
                 <span style="color: #55ff55;">Online</span> - ${data.players.online}/${data.players.max} Kişi<br>
                 <span style="font-size: 0.9em; color: #ccc;">
