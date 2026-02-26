@@ -48,13 +48,17 @@ async function getStatus() {
 
         if (data.online) {
             const version = data.version || "Bilinmiyor";  //durum göstergesi çalışması için lazım
+            const oyuncuListesi = data.players.list //oyuncu yok ise yazı yazmasın, ve oyuncular arası , olsun
+                ? `<br><b style="color: white;">Oyuncular:</b> ${data.players.list.join(', ')}` 
+                : "";
             statusText.innerHTML = `
                 <span style="color: #55ff55;">Online</span> - ${data.players.online}/${data.players.max} Kişi<br>
                 <span style="font-size: 0.9em; color: #ccc;">
                     <b style="color: white;">Sürüm:</b> ${version} (Java)<br>
                     <b style="color: white;">IP:</b> <b style="color: cornflowerblue;">oyna.thozoz.vip</b> <br>
-                    <b style="color: white;">Açıklama: </b> ${data.motd.clean}
-                </span>
+                    <b style="color: white;">Açıklama: </b> ${data.motd.html}
+                    ${oyuncuListesi}                
+                    </span>
             `;
         } else {
             statusText.innerHTML = `<span style="color: #ff5555;">Offline</span>`;
